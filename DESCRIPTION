@@ -1,15 +1,14 @@
-Package: yourPkg
-Title: What the Package Does (One Line, Title Case)
+Package: covid19tracker
+Title: Visualizing the outbreak of Covid19 in three countries and each region
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "XITONG",
+           family = "HE",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
+           email = "xhee0013@student.monash.edu",
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to
-    pick a license
+Description: This package provides the shiny app to explore the case situation of Covid19 in each region in three countries such as Austalia, China, United Kingdom.
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
