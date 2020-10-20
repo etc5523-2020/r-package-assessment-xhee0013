@@ -4,10 +4,10 @@
 \alias{summary_table}
 \title{Summary_table}
 \usage{
-summary_table(country)
+summary_table(Country)
 }
 \arguments{
-\item{country}{The country data to be formatted in table such as Australia, China and United Kingdom.}
+\item{Country}{The country data to be formatted in table such as Australia, China and United Kingdom.}
 }
 \value{
 A formatted table of the data set will be displayed
