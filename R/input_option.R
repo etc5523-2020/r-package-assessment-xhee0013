@@ -17,7 +17,7 @@ input_option <- function(input, data){
                        choices = unique(data$country),
                        selected = "China")
   } else if(input == "province"){
-    selectInput("province", "Which province?", choices = "")
+    selectInput("province", "Which province?", choices =unique(data$province) )
   } else if(input == "summary"){
     radioButtons("comparison_summary", h3("Select country:"),
                          choices =unique(data$country))
