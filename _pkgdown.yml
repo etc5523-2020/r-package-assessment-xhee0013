@@ -1,0 +1,31 @@
+template:
+  params:
+    bootswatch: flatly
+    
+reference:
+- title: "About the datasets"
+- contents:
+  - covid19_count
+  - covid19_region
+- title: "Visualizing the Shiny app"
+- contents: 
+  - launch_app
+- title: "User interface function"
+- contents:
+  - input_option
+- title: "Server-side function"
+- contents:
+  - summary_table
+  
+navbar:
+  structure:
+    left: [help]
+    right: [github]
+  components:
+    home: ~
+    help:
+      text: Get started
+      href: articles/covid19tracker.html
+    github:
+      icon: fa-github fa-lg
+      href: https://github.com/etc5523-2020/r-package-assessment-xhee0013

@@ -13,7 +13,13 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 ```
+This `covid19tracker` package provides some function and cleaned data for describing how an Shiny web application could be launched interactively, and giving the visualization about the COVID19 case situation.
 
-```{r setup}
-library(covid19tracker)
+## Loading package
+The `covid19`tracker package can be installed directly from [GitHub](https://github.com/etc5523-2020/r-package-assessment-xhee0013) with:
+
+```{r install, eval=FALSE}
+# install.packages("devtools")
+devtools::install_github("eetc5523-2020/r-package-assessment-xhee0013")
 ```
+
