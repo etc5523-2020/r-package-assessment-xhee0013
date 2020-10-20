@@ -1,0 +1,19 @@
+---
+title: "Explore the case situation of COVID19 via Shiny Application in three countries"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Explore the case situation of COVID19 via Shiny Application in three countries}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(covid19tracker)
+```

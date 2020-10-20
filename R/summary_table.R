@@ -14,9 +14,9 @@ summary_table<-function(country){
     dplyr::select(Type,Month,country,Cases)%>%
     dplyr::group_by(Type,Month,country) %>%
     dplyr::summarise(Cases = sum(Cases))%>%
-    dplyr::pivot_wider(names_from = Type,
-                       values_from = Cases)
-  dplyr::filter(country==icountry)%>%
+    tidyr::pivot_wider(names_from = Type,
+                       values_from = Cases)%>%
+  dplyr::filter(country==country)%>%
     kableExtra::kable(col.names = c("Month", "Country", "Confirmed", "Death", "Recovered"),
                       align = "llrrr",
                       booktabs=TRUE,
