@@ -2,7 +2,7 @@
 #'
 #'@description Creates a styled and formatted table to represent the summary case situation of COVID19 COVID19 in each country.
 #'
-#'@param Country The country data to be formatted in table such as Australia, China and United Kingdom.
+#'@param country The country data to be formatted in table such as Australia, China and United Kingdom.
 #'
 #'@return A formatted table of the data set will be displayed
 #'

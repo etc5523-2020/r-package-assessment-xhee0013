@@ -7,7 +7,7 @@
 summary_table(country)
 }
 \arguments{
-\item{Country}{The country data to be formatted in table such as Australia, China and United Kingdom.}
+\item{country}{The country data to be formatted in table such as Australia, China and United Kingdom.}
 }
 \value{
 A formatted table of the data set will be displayed

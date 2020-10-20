@@ -22,7 +22,8 @@ Imports:
     coronavirus,
     lubridate,
     tibble,
-    magrittr
+    magrittr,
+    tidyr
 Suggests: 
     knitr,
     rmarkdown
