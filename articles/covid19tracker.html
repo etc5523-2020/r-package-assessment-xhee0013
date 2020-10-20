@@ -61,7 +61,8 @@
 
       
 
-      </header><script src="covid19tracker_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
+      </header><script src="covid19tracker_files/accessible-code-block-0.0.1/empty-anchor.js"></script><script src="covid19tracker_files/kePrint-0.0.1/kePrint.js"></script><link href="covid19tracker_files/lightable-0.0.1/lightable.css" rel="stylesheet">
+<div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Explore the case situation of COVID19 via Shiny Application in three countries</h1>
@@ -81,7 +82,238 @@
 <p>The <code>covid19</code>tracker package can be installed directly from <a href="https://github.com/etc5523-2020/r-package-assessment-xhee0013">GitHub</a> with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit">
 <span class="co"># install.packages("devtools")</span>
-<span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span><span class="op">(</span><span class="st">"eetc5523-2020/r-package-assessment-xhee0013"</span><span class="op">)</span></pre></div>
+<span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span><span class="op">(</span><span class="st">"eetc5523-2020/r-package-assessment-xhee0013"</span><span class="op">)</span>
+
+<span class="co"># load the package</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">covid19tracker</span><span class="op">)</span></pre></div>
+</div>
+<div id="loading-the-data-sets" class="section level2">
+<h2 class="hasAnchor">
+<a href="#loading-the-data-sets" class="anchor"></a>Loading the data sets</h2>
+<p>This package also contains the following data sets:</p>
+<ul>
+<li>
+<strong>covid19_count</strong>: This data set displays the monthly coronavirus cases in each country with each region in each country</li>
+<li>
+<strong>covid19_region</strong>: This data set shows the cumulative COVID19 confirmed cases for each region in three countries.</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="downlit">
+<span class="va">covid19_count</span>
+<span class="va">covid19_region</span></pre></div>
+</div>
+<div id="main-function" class="section level2">
+<h2 class="hasAnchor">
+<a href="#main-function" class="anchor"></a>Main function</h2>
+<p>The main functions in this package includes:</p>
+<ul>
+<li>
+<strong>summary_table</strong>: This function create a styled and formatted table to represent the summary case situation of COVID19 in each country.</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="downlit">
+<span class="fu"><a href="../reference/summary_table.html">summary_table</a></span><span class="op">(</span><span class="st">"China"</span><span class="op">)</span></pre></div>
+<table class="table table table-striped table-hover table-bordered">
+<caption>
+summary statistic
+</caption>
+<thead><tr>
+<th style="text-align:left;">
+Month
+</th>
+<th style="text-align:left;">
+Country
+</th>
+<th style="text-align:right;">
+Confirmed
+</th>
+<th style="text-align:right;">
+Death
+</th>
+<th style="text-align:right;">
+Recovered
+</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+1
+</td>
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+China
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+9802
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+213
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+214
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+2
+</td>
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+China
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+69554
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+2624
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+39106
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+3
+</td>
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+China
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+2923
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+472
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+36886
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+4
+</td>
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+China
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+1677
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+1328
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+2317
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+5
+</td>
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+China
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+190
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+1
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+866
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+6
+</td>
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+China
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+639
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+3
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+243
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+7
+</td>
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+China
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+2870
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+20
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+1155
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+8
+</td>
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+China
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+2259
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+62
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+3807
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+9
+</td>
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+China
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+321
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+13
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+535
+</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<strong>input_option</strong>: This function provides the shiny input options for the different variables which are contained in the data sets.</li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="downlit">
+<span class="fu"><a href="../reference/input_option.html">input_option</a></span><span class="op">(</span><span class="st">"country"</span>, <span class="va">covid19_count</span><span class="op">)</span></pre></div>
+</div>
+<div id="launching-the-shiny-app" class="section level2">
+<h2 class="hasAnchor">
+<a href="#launching-the-shiny-app" class="anchor"></a>Launching the Shiny App</h2>
+<p>When downloading the package,the shiny app can be launched using the following <code>launch_app</code> function.</p>
+<div class="sourceCode" id="cb5"><pre class="downlit">
+<span class="fu"><a href="../reference/launch_app.html">launch_app</a></span><span class="op">(</span><span class="op">)</span></pre></div>
+<p>The main motivation of this simple shiny app is designed to interactively visualize the situation of COVID-19 cases in three countries such as Australia, China and United Kingdom from January to September and provide a platform for performing and reviewing the change of cases distribution for each regions in all countries across time. All data used by this application are collected through <code>coronavirus</code>package which is from <a href="https://github.com/RamiKrispin/coronavirus">RamiKrispin GitHub repo</a>.</p>
+<p>Within the app, users can compare the total number of cases and deaths recorded by each of the states in the country using the three following data visualisations:</p>
+<ol style="list-style-type: decimal">
+<li><p>A leaflet map displaying the confirmed case of COVID-19 in each region with its corresponding country.</p></li>
+<li><p>A time series line plotly graph showing the time series data about how the three type of COVID-19 cases such as confirmed, death and recovered distributed from January to September in each corresponding region.</p></li>
+<li><p>A pie plotly graph representing the proportion of each case type in different months in each specific region.</p></li>
+<li><p>A table recording the number of confirmed,death and recovered case in each country from January to September</p></li>
+</ol>
+</div>
+<div id="further-comment" class="section level2">
+<h2 class="hasAnchor">
+<a href="#further-comment" class="anchor"></a>Further comment</h2>
+<p>If you would like to contribute to the package or leave comments, please feel free to leave an <a href="https://github.com/etc5523-2020/r-package-assessment-xhee0013/issues">issue on Github</a> or send me an email via <a href="mailto:xhee0013@student.monash.edu" class="email">xhee0013@student.monash.edu</a></p>
 </div>
   </div>
 
