@@ -1,6 +1,6 @@
-#' covid19_region
+#' @title COVID-19 case numbers in each region
 #'
-#' This data set shows the cumulative COVID19 confirmed cases for each region in three countries.
+#' @description This data set shows the cumulative COVID19 confirmed cases for each region in three countries.
 #' 
 #' @format a tibble with 51 observations and 6 variables 
 #' 

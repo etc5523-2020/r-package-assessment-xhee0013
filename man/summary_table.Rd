@@ -2,7 +2,7 @@
 % Please edit documentation in R/summary_table.R
 \name{summary_table}
 \alias{summary_table}
-\title{Summary_table}
+\title{Summary statistics table in each country}
 \usage{
 summary_table(Country)
 }

@@ -1,4 +1,4 @@
-#' Create input options for shiny app
+#' @title  Create input options for shiny application
 #' 
 #' @description Create the shiny input options for the different variables which are contained in the data sets.
 #'

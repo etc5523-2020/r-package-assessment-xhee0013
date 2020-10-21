@@ -3,7 +3,7 @@
 \docType{data}
 \name{covid19_count}
 \alias{covid19_count}
-\title{covid19_count}
+\title{COVID-19 case numbers in three countries}
 \format{
 In total there are 1395 observations across 7 variables.
 \itemize{

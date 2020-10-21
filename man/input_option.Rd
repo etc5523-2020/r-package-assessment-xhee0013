@@ -2,7 +2,7 @@
 % Please edit documentation in R/input_option.R
 \name{input_option}
 \alias{input_option}
-\title{Create input options for shiny app}
+\title{Create input options for shiny application}
 \usage{
 input_option(input, data)
 }

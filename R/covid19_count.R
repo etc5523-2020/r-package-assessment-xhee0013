@@ -1,6 +1,6 @@
-#'covid19_count
+#'@title  COVID-19 case numbers in three countries
 #'
-#'This data set displays the monthly coronavirus cases in each country with each region in each country
+#'@description  This data set displays the monthly coronavirus cases in each country with each region in each country
 #'
 #'@format In total there are 1395 observations across 7 variables.
 #' 

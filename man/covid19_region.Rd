@@ -3,7 +3,7 @@
 \docType{data}
 \name{covid19_region}
 \alias{covid19_region}
-\title{covid19_region}
+\title{COVID-19 case numbers in each region}
 \format{
 a tibble with 51 observations and 6 variables
 \itemize{

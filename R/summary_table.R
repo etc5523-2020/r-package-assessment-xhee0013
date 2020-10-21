@@ -3,7 +3,7 @@ globalVariables("Month")
 globalVariables("country")
 globalVariables("Cases")
 
-#'Summary_table
+#'@title  Summary statistics table in each country
 #'
 #'@description Creates a styled and formatted table to represent the summary case situation of COVID19 COVID19 in each country.
 #'
