@@ -1,3 +1,8 @@
+globalVariables("Type")
+globalVariables("Month")
+globalVariables("country")
+globalVariables("Cases")
+
 #'Summary_table
 #'
 #'@description Creates a styled and formatted table to represent the summary case situation of COVID19 COVID19 in each country.
@@ -10,7 +15,7 @@
 #'
 #'@export
 summary_table<-function(Country){
-  covid19_count%>%
+  covid19tracker::covid19_count%>%
     dplyr::select(Type,Month,country,Cases)%>%
     dplyr::group_by(Type,Month,country) %>%
     dplyr::summarise(Cases = sum(Cases))%>%
