@@ -25,9 +25,39 @@ with:
 devtools::install_github("etc5523-2020/r-package-assessment-xhee0013")
 ```
 
+## Data collection
+
+The data set with COVID-19 information is provided by `coronavirus`
+package which is from which is from [RamiKrispin GitHub
+repo](https://github.com/RamiKrispin/coronavirus).
+
+This package contains two data sets: `covid19_count` and
+`covid19_region`
+
+  - **covid19\_count**: This data set displays the monthly coronavirus
+    cases in each country with each region in each country
+
+  - **covid19\_region**: This data set shows the cumulative COVID19
+    confirmed cases for each region in three countries.
+
+## Package Functions
+
+This package provides three function to use:
+
+  - **launch\_app**: This function runs the COVID-19 Tracker Shiny App
+    exploring the case situation of Coronavirus for each region in three
+    countries
+
+  - **summary\_table**: This function create a styled and formatted
+    table to represent the summary case situation of COVID19 in each
+    country.
+
+  - **input\_option**: This function provides the shiny input options
+    for the different variables which are contained in the data sets.
+
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a basic example to show both data sets in this package:
 
 ``` r
 library(covid19tracker)
@@ -67,22 +97,35 @@ covid19_region
 #> # … with 41 more rows
 ```
 
-<!-- What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so: -->
+### The overall time series trend of COVID-19 case
 
-<!-- ```{r cars} -->
+``` r
+library(tidyverse)
 
-<!-- summary(cars) -->
+covid19_count%>%
+  dplyr::filter(province=="Hubei")%>%
+  ggplot(aes(x=Month,y=Cases,col=Type))+
+  geom_line()+
+  geom_point()+
+  labs(x = "Month", y = "Cases count", title = "Hubei")+
+  theme_bw()+
+  theme(legend.position="bottom",
+        legend.direction="horizontal",
+        legend.box.background = element_rect(fill = "transparent"),
+        legend.background = element_rect(fill ="transparent",linetype="solid",color = "#BDD9EC"),
+        axis.text = element_text(size = 10),
+        legend.text = element_text(size = 10),
+        legend.title = element_blank(),
+        axis.title = element_text(size = 12),
+        axis.line = element_line(size = 0.4, colour = "white"),
+        plot.background = element_rect(fill = "#e3f0fc"),
+        panel.background = element_rect(fill="transparent"),
+        panel.border = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        axis.ticks.x.bottom = element_line(colour = "white",size = 0),
+        plot.margin = margin(10,20,10,20))+
+  scale_x_continuous(breaks = seq(1, 9,1))
+```
 
-<!-- ``` -->
-
-<!-- You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. -->
-
-<!-- You can also embed plots, for example: -->
-
-<!-- ```{r pressure, echo = FALSE} -->
-
-<!-- plot(pressure) -->
-
-<!-- ``` -->
-
-<!-- In that case, don't forget to commit and push the resulting figure files, so they display on GitHub! -->
+<img src="man/figures/README-lineplot-1.png" width="100%" />
