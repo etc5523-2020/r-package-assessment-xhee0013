@@ -9,3 +9,10 @@ launch_app()
 \description{
 This function will launch shiny app where users can explore the case situation of Covid-19 for each region in three countries.
 }
+\examples{
+\dontrun{
+launch_app()
+}
+
+
+}

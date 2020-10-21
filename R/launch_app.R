@@ -6,7 +6,19 @@
 #' 
 #' @import shiny
 #' 
+#' @examples
+#' \dontrun{
+#' launch_app()
+#' }
+#' 
+#' 
 #' @export
 launch_app <- function(){
-  shiny::runApp("inst/app/app.R")
+  appDir <- system.file( "app", package = "covid19tracker")
+  
+  if (appDir==""){
+    stop("Could not find example directory. Try re-installed `covid19tracker` package")
+  }
+  
+  shiny::runApp(appDir, display.mode = "normal")
 }
