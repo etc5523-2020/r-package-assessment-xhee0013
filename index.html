@@ -38,6 +38,9 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
 <li>
+  <a href="articles/covid19tracker.html">Get started</a>
+</li>
+<li>
   <a href="reference/index.html">Reference</a>
 </li>
 <li>
@@ -76,6 +79,7 @@
 <div class="sourceCode" id="cb1"><pre class="downlit">
 <span class="co"># install.packages("devtools")</span>
 <span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span><span class="op">(</span><span class="st">"etc5523-2020/r-package-assessment-xhee0013"</span><span class="op">)</span></pre></div>
+<p>For more detailed instructions on how to use the package and the functions contained within it, please access the pkgdown website: <a href="https://etc5523-2020.github.io/r-package-assessment-xhee0013/">covid19tracker</a>.</p>
 </div>
 <div id="data-collection" class="section level2">
 <h2 class="hasAnchor">
@@ -135,10 +139,190 @@
 <span class="co">#&gt;  9 confirmed China     Anhui                         117.  31.8   991</span>
 <span class="co">#&gt; 10 confirmed China     Beijing                       116.  40.2   935</span>
 <span class="co">#&gt; # … with 41 more rows</span></pre></div>
+<p>This is an example with <strong>summary_table</strong> function:</p>
+<div class="sourceCode" id="cb4"><pre class="downlit">
+<span class="fu"><a href="reference/summary_table.html">summary_table</a></span><span class="op">(</span><span class="st">"Australia"</span><span class="op">)</span></pre></div>
+<table class="table table table-striped table-hover table-bordered">
+<caption>
+<p>summary statistic</p>
+</caption>
+<thead><tr>
+<th style="text-align:left;">
+<p>Month</p>
+</th>
+<th style="text-align:left;">
+<p>Country</p>
+</th>
+<th style="text-align:right;">
+<p>Confirmed</p>
+</th>
+<th style="text-align:right;">
+<p>Death</p>
+</th>
+<th style="text-align:right;">
+<p>Recovered</p>
+</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+<p>1</p>
+</td>
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+<p>Australia</p>
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+<p>9</p>
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+<p>0</p>
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+<p>2</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+<p>2</p>
+</td>
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+<p>Australia</p>
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+<p>16</p>
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+<p>0</p>
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+<p>9</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+<p>3</p>
+</td>
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+<p>Australia</p>
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+<p>4534</p>
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+<p>18</p>
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+<p>347</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+<p>4</p>
+</td>
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+<p>Australia</p>
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+<p>2207</p>
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+<p>75</p>
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+<p>5384</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+<p>5</p>
+</td>
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+<p>Australia</p>
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+<p>436</p>
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+<p>10</p>
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+<p>876</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+<p>6</p>
+</td>
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+<p>Australia</p>
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+<p>718</p>
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+<p>1</p>
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+<p>422</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+<p>7</p>
+</td>
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+<p>Australia</p>
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+<p>9360</p>
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+<p>97</p>
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+<p>2943</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+<p>8</p>
+</td>
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+<p>Australia</p>
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+<p>8539</p>
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+<p>456</p>
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+<p>11365</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+<p>9</p>
+</td>
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+<p>Australia</p>
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+<p>959</p>
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+<p>167</p>
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+<p>2302</p>
+</td>
+</tr>
+</tbody>
+</table>
 <div id="the-overall-time-series-trend-of-covid-19-case" class="section level3">
 <h3 class="hasAnchor">
 <a href="#the-overall-time-series-trend-of-covid-19-case" class="anchor"></a>The overall time series trend of COVID-19 case</h3>
-<div class="sourceCode" id="cb4"><pre class="downlit">
+<div class="sourceCode" id="cb5"><pre class="downlit">
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">tidyverse</span><span class="op">)</span>
 
 <span class="va">covid19_count</span><span class="op">%&gt;%</span>

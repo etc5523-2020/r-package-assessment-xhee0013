@@ -38,6 +38,9 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
 <li>
+  <a href="../articles/covid19tracker.html">Get started</a>
+</li>
+<li>
   <a href="../reference/index.html">Reference</a>
 </li>
 <li>
@@ -291,7 +294,7 @@ China
 </table>
 <ul>
 <li>
-<strong>input_option</strong>: This function provides the shiny input options for the different variables which are contained in the data sets.</li>
+<strong>input_option</strong>: This function provides the shiny input options for the different variables which are contained in the data sets. In this case, the countries in <code>covid19_count</code> will be displayed such as Australia,China or United Kingdom.</li>
 </ul>
 <div class="sourceCode" id="cb4"><pre class="downlit">
 <span class="fu"><a href="../reference/input_option.html">input_option</a></span><span class="op">(</span><span class="st">"country"</span>, <span class="va">covid19_count</span><span class="op">)</span></pre></div>
@@ -299,17 +302,19 @@ China
 <div id="launching-the-shiny-app" class="section level2">
 <h2 class="hasAnchor">
 <a href="#launching-the-shiny-app" class="anchor"></a>Launching the Shiny App</h2>
-<p>When downloading the package,the shiny app can be launched using the following <code>launch_app</code> function.</p>
+<p>When downloading the package, the shiny app can be launched using the following <code>launch_app</code> function.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit">
 <span class="fu"><a href="../reference/launch_app.html">launch_app</a></span><span class="op">(</span><span class="op">)</span></pre></div>
-<p>The main motivation of this simple shiny app is designed to interactively visualize the situation of COVID-19 cases in three countries such as Australia, China and United Kingdom from January to September and provide a platform for performing and reviewing the change of cases distribution for each regions in all countries across time. All data used by this application are collected through <code>coronavirus</code>package which is from <a href="https://github.com/RamiKrispin/coronavirus">RamiKrispin GitHub repo</a>.</p>
-<p>Within the app, users can compare the total number of cases and deaths recorded by each of the states in the country using the three following data visualisations:</p>
+<p>The main motivation of this simple shiny app is designed to interactively visualize the situation of COVID-19 cases in three countries such as Australia, China and United Kingdom from January to September and provide a platform for performing and reviewing the change of cases distribution for each regions in all countries across time. All data used by this application are collected through <code>coronavirus</code>package which is from <a href="https://github.com/RamiKrispin/coronavirus">RamiKrispin GitHub repo</a>. The coronavirus dataset consists of measurements of case distribution between countries and regions across time, therefore it will be used and constructed a series of analysis to evaluate the situation of COVID-19 pandemic.</p>
+<p>In addition,the four main visualization sections are contained in the application:</p>
 <ol style="list-style-type: decimal">
 <li><p>A leaflet map displaying the confirmed case of COVID-19 in each region with its corresponding country.</p></li>
 <li><p>A time series line plotly graph showing the time series data about how the three type of COVID-19 cases such as confirmed, death and recovered distributed from January to September in each corresponding region.</p></li>
 <li><p>A pie plotly graph representing the proportion of each case type in different months in each specific region.</p></li>
 <li><p>A table recording the number of confirmed,death and recovered case in each country from January to September</p></li>
 </ol>
+<p>Furthermore, there is an <code>About</code> tab to explain more details about the introduction and output of this COVID-19 Tracker shiny app. This is to give the user more clearly understanding about how to use this shiny app, and the illustration of each output.</p>
+<p>More detailed instructions on how to use the applications and its content are provided on the <a href="https://xitong-he.shinyapps.io/shiny-assessment-xhee0013">remote host</a>.</p>
 </div>
 <div id="further-comment" class="section level2">
 <h2 class="hasAnchor">
