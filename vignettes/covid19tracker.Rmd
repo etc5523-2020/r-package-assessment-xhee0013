@@ -1,0 +1,86 @@
+---
+title: "Explore the case situation of COVID19 via Shiny Application in three countries"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Explore the case situation of COVID19 via Shiny Application in three countries}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+library(covid19tracker)
+```
+This `covid19tracker` package provides some function and cleaned data for describing how an Shiny web application could be launched interactively, and giving the visualization about the COVID19 case situation.
+
+## Loading package
+The `covid19`tracker package can be installed directly from [GitHub](https://github.com/etc5523-2020/r-package-assessment-xhee0013) with:
+
+```{r install, eval=FALSE}
+# install.packages("devtools")
+devtools::install_github("eetc5523-2020/r-package-assessment-xhee0013")
+
+# load the package
+library(covid19tracker)
+```
+
+
+## Loading the data sets
+
+This package also contains the following data sets:
+
+- **covid19_count**: This data set displays the monthly coronavirus cases in each country with each region in each country
+- **covid19_region**: This data set shows the cumulative COVID19 confirmed cases for each region in three countries.
+```{r data, eval=FALSE}
+covid19_count
+covid19_region
+```
+
+## Main function
+
+The main functions in this package includes:
+
+- **summary_table**: This function create a styled and formatted table to represent the summary case situation of COVID19 in each country.
+```{r table}
+summary_table("China")
+
+```
+
+
+- **input_option**: This function provides the shiny input options for the different variables which are contained in the data sets. In this case, the countries in `covid19_count` will be displayed such as Australia,China or United Kingdom.
+
+```{r,eval=FALSE}
+input_option("country", covid19_count)
+```
+
+
+## Launching the Shiny App
+
+When downloading the package, the shiny app can be launched using the following `launch_app` function.
+
+```{r launch, eval=FALSE}
+launch_app()
+```
+
+
+The main motivation of this simple shiny app is designed to interactively visualize the situation of COVID-19 cases in three countries such as Australia, China and United Kingdom from January to September and provide a platform for performing and reviewing the change of cases distribution for each regions in all countries across time. All data used by this application are collected through `coronavirus`package which is from [RamiKrispin GitHub repo](https://github.com/RamiKrispin/coronavirus). The coronavirus dataset consists of measurements of case distribution between countries and regions across time, therefore it will be used and constructed a series of analysis to evaluate the situation of COVID-19 pandemic.
+
+In addition,the four main visualization sections are contained in the application:   
+
+1. A leaflet map displaying the confirmed case of COVID-19 in each region with its corresponding country.
+
+2. A time series line plotly graph showing the time series data about how the three type of COVID-19 cases such as confirmed, death and recovered distributed from January to September in each corresponding region.
+
+3. A pie plotly graph representing the proportion of each case type in different months in each specific region.  
+
+4. A table recording the number of confirmed,death and recovered case in each country from January to September
+
+Furthermore, there is an `About` tab to explain more details about the introduction and output of this COVID-19 Tracker shiny app. This is to give the user more clearly understanding about how to use this shiny app, and the illustration of each output.
+
+More detailed instructions on how to use the applications and its content are provided on the [remote host](https://xitong-he.shinyapps.io/shiny-assessment-xhee0013).
+
+## Further comment
+If you would like to contribute to the package or leave comments, please feel free to leave an [issue on Github](https://github.com/etc5523-2020/r-package-assessment-xhee0013/issues) or send me an email via xhee0013@student.monash.edu
