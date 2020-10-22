@@ -1,5 +1,6 @@
 ---
 output: github_document
+always_allow_html: true
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -29,6 +30,9 @@ You can install the released version of covid19tracker from [Github](https://git
 # install.packages("devtools")
 devtools::install_github("etc5523-2020/r-package-assessment-xhee0013")
 ```
+
+For more detailed instructions on how to use the package and the functions contained within it, please access the pkgdown website: [covid19tracker](https://etc5523-2020.github.io/r-package-assessment-xhee0013/).
+
 ## Data collection
 
 The data set with COVID-19 information is provided by `coronavirus` package which is from which is from [RamiKrispin GitHub repo](https://github.com/RamiKrispin/coronavirus).
@@ -61,6 +65,12 @@ covid19_count
 
 ```{r region}
 covid19_region
+```
+
+This is an example with **summary_table** function:
+
+```{r table}
+summary_table("Australia")
 ```
 
 ### The overall time series trend of COVID-19 case 

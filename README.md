@@ -25,6 +25,10 @@ with:
 devtools::install_github("etc5523-2020/r-package-assessment-xhee0013")
 ```
 
+For more detailed instructions on how to use the package and the
+functions contained within it, please access the pkgdown website:
+[covid19tracker](https://etc5523-2020.github.io/r-package-assessment-xhee0013/).
+
 ## Data collection
 
 The data set with COVID-19 information is provided by `coronavirus`
@@ -96,6 +100,370 @@ covid19_region
 #> 10 confirmed China     Beijing                       116.  40.2   935
 #> # … with 41 more rows
 ```
+
+This is an example with **summary\_table** function:
+
+``` r
+summary_table("Australia")
+```
+
+<table class="table table-striped table-hover table-bordered" style="margin-left: auto; margin-right: auto;">
+
+<caption>
+
+summary statistic
+
+</caption>
+
+<thead>
+
+<tr>
+
+<th style="text-align:left;">
+
+Month
+
+</th>
+
+<th style="text-align:left;">
+
+Country
+
+</th>
+
+<th style="text-align:right;">
+
+Confirmed
+
+</th>
+
+<th style="text-align:right;">
+
+Death
+
+</th>
+
+<th style="text-align:right;">
+
+Recovered
+
+</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+
+1
+
+</td>
+
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+
+Australia
+
+</td>
+
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+
+9
+
+</td>
+
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+
+0
+
+</td>
+
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+
+2
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+
+2
+
+</td>
+
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+
+Australia
+
+</td>
+
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+
+16
+
+</td>
+
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+
+0
+
+</td>
+
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+
+9
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+
+3
+
+</td>
+
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+
+Australia
+
+</td>
+
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+
+4534
+
+</td>
+
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+
+18
+
+</td>
+
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+
+347
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+
+4
+
+</td>
+
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+
+Australia
+
+</td>
+
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+
+2207
+
+</td>
+
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+
+75
+
+</td>
+
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+
+5384
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+
+5
+
+</td>
+
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+
+Australia
+
+</td>
+
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+
+436
+
+</td>
+
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+
+10
+
+</td>
+
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+
+876
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+
+6
+
+</td>
+
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+
+Australia
+
+</td>
+
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+
+718
+
+</td>
+
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+
+1
+
+</td>
+
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+
+422
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+
+7
+
+</td>
+
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+
+Australia
+
+</td>
+
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+
+9360
+
+</td>
+
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+
+97
+
+</td>
+
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+
+2943
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+
+8
+
+</td>
+
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+
+Australia
+
+</td>
+
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+
+8539
+
+</td>
+
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+
+456
+
+</td>
+
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+
+11365
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+
+9
+
+</td>
+
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+
+Australia
+
+</td>
+
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+
+959
+
+</td>
+
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+
+167
+
+</td>
+
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #2875a1 !important;">
+
+2302
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
 
 ### The overall time series trend of COVID-19 case
 
